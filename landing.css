@@ -43,6 +43,13 @@ li{
     line-height: 1.25;
     letter-spacing: -.05rem;
 }
+.ud-heading-sm{
+    font-family: udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    font-size: 1rem;
+}
 
 .ud-text-md{
     font-family: udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
@@ -56,6 +63,12 @@ li{
     font-weight: 400;
     line-height: 1.4;
     font-size: .8rem;
+}
+.ud-text-xs{
+    font-family: udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: .75rem;
 }
 .ud-text-lg{
     font-family: udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
@@ -83,6 +96,13 @@ li{
     line-height: 1.2;
     letter-spacing: -.02rem;
     font-size: 1.4rem;
+}
+.ud-heading-xs {
+    font-family: udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    font-size: .675rem;
 }
 section{
     min-width: 60rem;
@@ -294,6 +314,7 @@ input#search-form{
     box-shadow: none;
     position: relative;
 }
+/*carousel*/
 .carousel-scroll-lock{
     overflow-x: hidden;
 }
@@ -307,6 +328,124 @@ input#search-form{
     min-width: 0.1rem;
     scroll-snap-align: start;
 } 
+.popper-popper{
+    position: relative;
+}
+.course-card-container{
+    flex-direction: column;
+    max-width: 14.5rem;
+    min-width: 12rem;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+.course-unit-grid{
+    grid-auto-columns: calc((100% - (5 - 1) * 1.6rem)/5);
+    display: grid;
+    grid-auto-columns: max-content;
+    grid-auto-flow: column;
+    grid-gap: 1.6rem;
+    overflow: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    touch-action: manipulation;
+}
+.course-card-image-wrapper{
+    padding-bottom: 56.25%;
+    width: 100%;
+    background-color: #1c1d1f;
+    border: 1px solid #d1d7dc;
+    overflow: hidden;
+    position: relative;
+}
+.course-card-course-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.course-card-main-content{
+    width: 100%;
+    color: #1c1d1f;
+    white-space: nowrap;
+    flex: 1;
+    min-width: 1px;
+}
+.course-card-course-title{
+    margin-top: 0.8rem;
+    margin-bottom: 0.4rem;
+    display: -webkit-box!important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+.course-card-course-title a{
+    color: #1c1d1f;
+    font-weight: inherit;
+}
+.ud-sr-only{
+    display: none;
+}
+.course-card-instructor-list {
+    display: block!important;
+    display: -webkit-box!important;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    color: #6a6f73;
+}
+.course-card-row{
+    margin-bottom: .4rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.star-rating-star-wrapper{
+    display: inline-flex;
+    align-items: center;
+}
+.star-number{
+    margin-right: 0.4rem;
+    color: #b4690e;
+}
+.fa{
+    font-size: 12px;
+}
+.fa.checked{
+    color: #e59819;
+}
+.course-card-reviews-text{
+    margin-left: 0.4rem;
+}
+.price-text-container.course-card-price-text-container{
+    align-items: center;
+    color: #1c1d1f;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.course-card-course-badges{
+    display: flex;
+    margin: 0.8rem 0 0.4rem;
+    gap: 0.4rem 0.8rem
+}
+.ud-badge{
+    background-color: #eceb98;
+    color: #3d3c0a;
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    white-space: nowrap;
+}
+.popper-trigger-cont button{
+    visibility: hidden;
+}
+
+
+/*end carousel*/
 .ud-nav-button-container{
     border-bottom: none!important;
 }
@@ -358,7 +497,7 @@ input#tab-6:checked~#tab-6-label{
 
 
 .value-proposition{
-    width: 100vw;
+    width: 99.4vw;
     position: relative;
     left: 50%;
     right: 50%;
@@ -382,7 +521,6 @@ input#tab-6:checked~#tab-6-label{
 .value-props {
     display: flex;
     justify-content: space-between;
-
 }
 
 .value-props-prop {
@@ -414,3 +552,34 @@ input#tab-6:checked~#tab-6-label{
 .component-margin{    
     margin-top: 6.4rem;
 }
+.unit-title-container{
+    margin-bottom: 1.6rem;
+}
+
+.top-categories{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1.6rem -3.2rem 0;
+    justify-content: space-between;
+}
+.top-categories-category-card {
+    margin: 0 1.6rem 1.6rem 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: calc(100%/4 - 1.6rem);
+}
+.category-card-img-wrapper {
+    overflow: hidden;
+}
+.category-card-img-wrapper img{
+    background: #f7f9fa;
+    display: block;
+    object-fit: contain;
+    transition: transform 100ms cubic-bezier(.2,0,1,.9);
+}
+.category-card-category-card-title {
+    color: #1c1d1f;
+    padding: 0.8rem 0 1.6rem;
+}
+
