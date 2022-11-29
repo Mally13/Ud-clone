@@ -5,7 +5,7 @@
     --btn-text-border-color:#1c1d1f;
     --dark-btn-text-color:#fff;
 }
-.tabs--tabs-container--PvhiR {
+.tabs-container {
     --tabs-scroll-left-bg: linear-gradient(to right, #fff 75%, rgba(255,255,255,0));
     --tabs-scroll-right-bg: linear-gradient(to left, #fff 75%, rgba(255,255,255,0));
     --tabs-scroll-right-bg-overflow: linear-gradient(to left, #fff, rgba(255,255,255,0));
@@ -69,6 +69,20 @@ li{
     font-size: 2.4rem;
     line-height: 1.35;
     letter-spacing: -.02rem;
+}
+.ud-heading-md{
+    font-family: udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    font-size: 1rem;
+}
+.ud-heading-xl{
+    font-family: udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    font-size: 1.4rem;
 }
 section{
     min-width: 60rem;
@@ -276,4 +290,127 @@ input#search-form{
 
 
 
+.ud-tabs-nav-buttons{
+    box-shadow: none;
+    position: relative;
+}
+.carousel-scroll-lock{
+    overflow-x: hidden;
+}
+.carousel-grid{
+    display: grid;
+    grid-auto-columns: max-content;
+    grid-auto-flow: column;
+    grid-gap: 1.6rem;
+}
+.carousel-scroll-item{
+    min-width: 0.1rem;
+    scroll-snap-align: start;
+} 
+.ud-nav-button-container{
+    border-bottom: none!important;
+}
+.ud-btn-large{
+    background: 0 0;
+    padding: 0.8rem 0.4rem;
+    outline-offset: -0.4rem!important;
+    color: var(--tabs-nav-color-default);
+    position: relative;
+    width: 100%;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    vertical-align: bottom;
+    white-space: nowrap;
+}
 
+.ud-nav-button-container .ud-btn-large:hover,
+input#tab-0:checked~#tab-0-label,
+input#tab-1:checked~#tab-1-label,
+input#tab-2:checked~#tab-2-label,
+input#tab-3:checked~#tab-3-label,
+input#tab-4:checked~#tab-4-label,
+input#tab-5:checked~#tab-5-label,
+input#tab-6:checked~#tab-6-label{
+    color: var(--tabs-nav-color-hover);
+}
+.ud-tab-content{
+    border: 1px solid #d1d7dc;
+    padding: 3.2rem;
+}
+.ud-tab-content div{
+	opacity: 0;
+	padding: 1.5em;
+	position: absolute;
+	z-index: -100;}
+
+
+.ud-tabs-nav-buttons>.carousel-container>.carousel-scroll.carousel-grid.carousel-scroll-lock>.carousel-scroll-item>.ud-nav-button-container>input#tab-0:checked~.ud-tab-content div#tab-content-0{
+    opacity: 1 !important;
+    z-index: 100 !important;
+}
+.ud-nav-button-container>input{
+    visibility: hidden;
+}
+
+
+
+
+.value-proposition{
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background: #f7f9fa;
+    border: 0;
+    margin-top: 6.4rem;
+    padding: 1.4rem 0;
+}
+.value-proposition h2{
+    display: none;
+}
+.ud-container{
+    max-width: 134rem;
+    margin-right: 128px;
+    margin-left: 128px;
+    padding-right: 2.4rem;
+    padding-left: 2.4rem;
+}
+.value-props {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.value-props-prop {
+    margin: 0 0 0 4.8rem;
+    display: flex;
+}
+.value-props-prop:nth-child(1) {
+    margin:0;
+    display: flex;
+}
+
+.value-props-graphic {
+    margin-right: 1.6rem;
+}
+.value-props-icon{
+    background: #d1d7dc;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.value-props-body{
+    max-width: 28.8rem;
+    display: flex;
+    align-items: center;
+}
+.component-margin{    
+    margin-top: 6.4rem;
+}
