@@ -68,7 +68,7 @@ li{
     font-family: udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
     font-weight: 400;
     line-height: 1.4;
-    font-size: .8rem;
+    font-size: 1rem;
 }
 .ud-text-xs{
     font-family: udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
@@ -183,9 +183,16 @@ nav.header-popper{
     white-space: nowrap;
     margin-left: 0.8rem;
 }
-.header-drop-btn span img{
-    height: 2.4rem;
-    width: 1.8rem;
+.header-drop-btn:hover{
+    color: #5624d0;
+}
+.header-drop-btn span svg{
+    height: 2.8rem;
+    width: 2rem;
+    fill:#1c1d1f;
+}
+.header-drop-btn span svg:hover{
+    fill: #5624d0;
 }
 
 .header-search-bar{
@@ -243,7 +250,12 @@ input#search-form{
     height: 3rem;
     font-weight: 700;
     line-height: 1.2;
+    min-width: 4rem;
     
+}
+.transparent-btn:hover{
+    background-color: rgba(0,0,0,.04);
+    color: #1c1d1f;
 }
 .dark-btn{
     color:var(--dark-btn-text-color);
@@ -252,6 +264,10 @@ input#search-form{
     height: 3rem;
         font-weight: 700;
     line-height: 1.2;
+    min-width: 4rem;
+}
+.dark-btn:hover{
+    color:var(--dark-btn-text-color);
 }
 .transparent-btn span, .dark-btn span{
     font-weight: 700;
@@ -488,28 +504,34 @@ input#search-form{
 }
 
 .ud-nav-button-container .ud-btn-large:hover,
-input#tab-0:checked~#tab-0-label,
-input#tab-1:checked~#tab-1-label,
-input#tab-2:checked~#tab-2-label,
-input#tab-3:checked~#tab-3-label,
-input#tab-4:checked~#tab-4-label,
-input#tab-5:checked~#tab-5-label,
-input#tab-6:checked~#tab-6-label{
+input#tab-0:checked+#tab-0-label,
+input#tab-1:checked+#tab-1-label,
+input#tab-2:checked+#tab-2-label,
+input#tab-3:checked+#tab-3-label,
+input#tab-4:checked+#tab-4-label,
+input#tab-5:checked+#tab-5-label,
+input#tab-6:checked+#tab-6-label{
     color: var(--tabs-nav-color-hover);
 }
 .ud-tab-content{
     border: 1px solid #d1d7dc;
     padding: 3.2rem;
 }
-.ud-tab-content div{
-	opacity: 0;
+#tab-content-0{
+    visibility: hidden;
 	padding: 1.5em;
 	position: absolute;
-	z-index: -100;}
+}
 
 
-.ud-tabs-nav-buttons>.carousel-container>.carousel-scroll.carousel-grid.carousel-scroll-lock>.carousel-scroll-item>.ud-nav-button-container>input#tab-0:checked~.ud-tab-content div#tab-content-0{
-    opacity: 1 !important;
+input#tab-0:checked~#tab-content-0,
+input#tab-1:checked+#tab-content-1,
+input#tab-2:checked+#tab-content-2,
+input#tab-3:checked+#tab-content-3
+input#tab-4:checked+#tab-content-4,
+input#tab-5:checked+#tab-content-5,
+input#tab-6:checked+#tab-content-6{
+    visibility:visible;
     z-index: 100 !important;
 }
 .ud-nav-button-container>input{
@@ -666,6 +688,9 @@ a.ud-btn{
     padding-left: 0;
     margin-top: 0;
     list-style: none;
+}
+.dark-btn:hover{
+    background-color: #000;
 }
 .partner-logos-logo-item {
     justify-self: center;
@@ -858,4 +883,7 @@ a.dark-btn{
 }
 .copyright-container.ud-text-xs{
     font-size: .8rem;
+}
+.ud-footer  .transparent-btn:hover{
+    color: #fff;
 }
