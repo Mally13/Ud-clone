@@ -33,6 +33,12 @@ img {
 a{
     text-decoration: none;
 }
+
+p, h1, h2, h3, h4, h5, h6, ul, ol {
+    font-size: inherit;
+    font-weight: 400;
+    max-width: 30rem;
+}
 li{
     list-style: none;
 }
@@ -74,7 +80,7 @@ li{
     font-family: udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
     font-weight: 400;
     line-height: 1.4;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 .ud-heading-serif-xl{
     font-family: SuisseWorks,Georgia,Times,times new roman,serif,apple color emoji,segoe ui emoji,segoe ui symbol;
@@ -674,26 +680,42 @@ a.ud-btn{
     align-items: center;
     display: flex;
     justify-content: center;
-    height: 32rem;
+    height: 30rem;
 }
 .non-student-cta-bg{
     align-items: center;
     display: flex;
     justify-content: center;
-    height: 32rem;
+    height: 22rem;
 }
 .non-student-cta-content-wrapper{
     display: flex;
     padding: 0;
     flex-direction: row-reverse;
 }
-.non-student-cta-body{
-    margin: 0 3rem 0 0;
+.non-student-cta-content-wrapper2{
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+}
+.non-student-cta-content-wrapper2 .non-student-cta-body{
+    margin: 0 0 0 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 40rem;
+    max-width: 30rem;
     text-align: left;
+}
+.non-student-cta-body{
+    margin: 0 2rem 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 30rem;
+    text-align: left;
+}
+.non-student-cta-content-wrapper2 .non-student-cta-image{
+    margin: 0 6rem 0 0;
 }
 .non-student-cta-image{
     margin: 0;
@@ -722,12 +744,17 @@ h3.non-student-cta-header.ud-heading-serif-xl {
     text-align: left;
     letter-spacing: normal;
     white-space: normal;
+
 }
 .ud-block-list-item-icon {
     min-height: 2.24rem;
     fill: currentColor;
     display: inline-block;
     flex-shrink: 0;
+}
+.ud-block-list-item-content{
+    flex: 1;
+    min-width: 1px;
 }
 .non-student-cta-ctas-container{
     display: flex;
@@ -746,4 +773,36 @@ a.dark-btn{
     border: 1px solid #1c1d1f;
     height: 3rem;
     margin-bottom: 4rem;
+}
+.ud-footer .footer-section.footer-section-main{
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
+    background: #1c1d1f;
+    border-top: 1px solid #3e4143;
+    color: #fff;  
+
+}
+.links-and-language-selector{
+    display: flex;
+}
+.language-selector-container{
+    padding: 0 0 2.4rem;
+    order: 1;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+.ud-footer .link-column {
+    flex-basis: 25.6rem;
+    margin-right: 1.6rem;
+    margin-bottom: 0;
+}
+.ud-unstyled-list, .unstyled-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: none;
+}
+.ud-footer .language-selector-container .ud-btn, .ud-footer .language-selector-container .ud-icon {
+    border-color: #fff;
+    color: #fff;
 }
